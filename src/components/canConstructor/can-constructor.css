@@ -1,0 +1,66 @@
+.c-can-constructor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1150px;
+    gap: 50px;
+    margin-top: 16px;
+}
+
+.c-can-controls-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.c-upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Add border to react-color circle */
+.react-color__circle > span > div > span > div {
+    border-radius: 100px;
+    border: 0.3px solid #A9A9A9;
+}
+
+.react-color__circle > span > div > span > div[title="#0C0C0C"] {
+    background: white!important;
+}
+
+.react-color__circle > span > div > span > div[title="#333333"] {
+    background: white!important;
+}
+
+.c-color-picker-label {
+    display: block;
+    margin-bottom: 16px;
+    width: max-content;
+}
+
+.c-color-picker-label__label {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.c-color-picker-label__color {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    letter-spacing: 0.16px;
+    margin-left: 12px;
+}
+
+
+.c-color-picker-label__color .m-upper-case {
+    text-transform: uppercase;
+}
+
+.c-color-picker__custom-color {
+    margin-top: 14px;
+}
+
+.c-color-picker__custom-color-text {
+    text-transform: none;
+}

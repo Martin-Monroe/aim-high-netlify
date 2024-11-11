@@ -1,0 +1,145 @@
+/* define variable css */
+:root {
+  --padding-vertical: 126px;
+  --padding-horizontal: 26px;
+
+  --can-z-index-water-layer: 100; 
+}
+
+body {
+  background: #050006;
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.16px;
+}
+
+.c-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: var(--padding-horizontal) var(--padding-vertical);
+}
+
+.c-logo__main {
+  z-index: 100;
+  width: 100px;
+  height: 80px;
+}
+
+.c-title {
+  position: relative;
+  margin-top: 40px;
+  width: 690px;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px; /* 112.5% */
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.c-footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.c-footer__copyright {
+  display: flex;
+  justify-items: flex-start;
+  gap: 16px;
+  align-self: end;
+}
+
+.c-logo__footer {
+  position: absolute;
+  height: 126px;
+  width: 156px;
+  right: -50px;
+  bottom: 0;
+}
+
+.c-wave {
+  width: 500px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.c-wave__top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Utils */
+
+.button-reset {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Media queries */
+@media screen and (max-width: 1700px) {
+  .c-header {
+    display: flex;
+    margin-left: 40px;
+  }
+  .c-title {
+    font-size: 48px;
+    width: auto;
+    margin-top: 0px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-layout {
+    padding: 16px;
+    align-items: flex-start;
+  }
+  .c-title {
+    font-size: 24px;
+    width: auto;
+    margin: 0;
+    line-height: 35px;
+  }
+
+  .c-logo__main {
+    display: none;
+  }
+
+  .c-logo__footer {
+    right: 0;
+  }
+  .c-footer__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .c-footer__big-text {
+    max-width: 250px;
+  }
+  .c-customized-can-view-container {
+    margin-left: 35px;
+  }
+  .c-wave__top {
+    display: none;
+  }
+  .c-logo__footer {
+    height: 100px;
+    width: 120px;
+  }
+}

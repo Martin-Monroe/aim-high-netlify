@@ -1,0 +1,13 @@
+.c-custom-logo {
+    cursor: pointer;
+}
+
+.c-custom-logo__image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.c-custom-logo__resize-border {
+    border: 2px solid transparent;
+}

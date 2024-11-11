@@ -1,0 +1,44 @@
+.soda-container {
+  position: relative;
+  isolation: isolate;
+
+  width: 300px;
+  height: 620px;
+  overflow: hidden;
+}
+
+.soda-layer {
+  position: absolute;
+  top: 0;
+  left: -195px;
+  width: 640px;
+  height: 640px;
+}
+
+.shadows-layer {
+  width: 640px;
+  height: 640px;
+  mix-blend-mode: multiply;
+}
+
+.can-water-layer {
+  width: 640px;
+  height: 640px;
+  z-index: calc(var(--can-z-index-water-layer) + 1);
+  opacity: 0.5;
+}
+
+.coda-caps-colored {
+  height: 640px;
+  width: 640px;
+  left: -195px;
+}
+
+.can-background {
+  height: 642px;
+  top: -1px;
+}
+
+.can-background img:not([src]), img[src=""] {
+  display: none; /* Hides the img element */
+}

@@ -1,0 +1,14 @@
+.c-file-upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.c-file-upload > * {
+    flex-shrink: 0;
+}
+
+.c-file-upload__label {
+    text-transform: uppercase;
+}

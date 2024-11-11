@@ -1,0 +1,18 @@
+.c-aim-logo-container {
+    display: relative;
+
+    width: 100px;
+    height: 80px;
+}
+
+.c-aim-logo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c-aim-logo-text {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}

@@ -1,0 +1,87 @@
+.c-custom-can-view-result {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.c-custom-can__aim-logo {
+  position: absolute;
+  top: 125px;
+  left: 23px;
+  height: 80px;
+  width: 100px;
+  z-index: var(--can-z-index-water-layer);
+}
+
+.magic-background-light {
+  position: absolute;
+  padding-bottom: 20px;
+
+  width: 247px;
+  height: 685px;
+  flex-shrink: 0;
+
+  border-radius: 685px;
+  background: #1243FF;
+  filter: blur(150px);
+}
+
+.export .magic-background-light {
+  display: none;
+}
+
+.c-custom-can__target {
+  position: absolute;
+  z-index: 200;
+  width: 240px;
+  left: 10px;
+  top: 195px;
+}
+
+.c-custom-can__logo1 {
+  position: absolute;
+  z-index: 300;
+  left: 141px;
+  top: 117px;
+}
+
+.c-custom-can__logo2 {
+  position: absolute;
+  z-index: 300;
+  left: 90px;
+  top: 300px;
+}
+
+.c-can-result__can-text {
+  position: absolute;
+  z-index: 300;
+  left: 30px;
+  top: 520px;
+  width: 210px;
+}
+
+.c-can-result__water {
+  text-align: center;
+  font-family: "ClashGrotesk-Bold";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  /* 121.429% */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.c-can-result__can-volume {
+  text-align: center;
+  font-family: "ClashDisplay-Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+}
+
+.c-customized-can-view-container {
+  margin-top: -26px;
+}
