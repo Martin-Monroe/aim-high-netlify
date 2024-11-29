@@ -33,7 +33,9 @@ function App() {
           <li>Terms</li>
         </ul>
         <div className="c-logo__footer">
-          <Logo />
+          <a href={MAIN_SITE_URL}>
+            <Logo />
+          </a>
         </div>
       </footer>
     </div>
