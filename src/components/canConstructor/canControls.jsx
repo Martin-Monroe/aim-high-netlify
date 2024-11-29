@@ -7,6 +7,7 @@ import {
   Checkbox,
   FormControlLabel,
   Grid,
+  Typography,
 } from "@mui/material";
 import classNames from "classnames";
 import UnderlinedText from "./../underlineText";
@@ -14,10 +15,12 @@ import { CAN_COLOR_LABEL_MAP } from "../const";
 import { toCanvas } from "html-to-image";
 import download from "downloadjs";
 import LoadingButton from "@mui/lab/LoadingButton";
+import "./can-controls.css";
 
 const circleSize = 20;
 const circleSpacing = 8;
 const countInRow = 7;
+const CONTACT_EMAIL = 'contact@drinkaimhigh.com';
 
 export function ColorPicker({
   colors,
@@ -254,17 +257,29 @@ export default function CanControls({
           />
         </Grid>
       </Grid>
-      <LoadingButton
-        variant="contained"
-        color="primary"
-        fullWidth={false}
-        style={{ width: 205, height: 40 }}
-        onClick={handleExportClick}
-        loading={isExportLoading}
-        disabled={isExportLoading}
-      >
-        Download Mock up
-      </LoadingButton>
+      <div className="c-actions-section">
+        <LoadingButton
+          variant="contained"
+          color="primary"
+          fullWidth={false}
+          onClick={handleExportClick}
+          loading={isExportLoading}
+          disabled={isExportLoading}
+        >
+          Download Mock up
+        </LoadingButton>
+        <div className="c-contact-action">
+          <Button
+            variant="contained"
+            color="primary"
+            fullWidth={false}
+            href={`mailto:${CONTACT_EMAIL}`}
+            >
+            Contact Us For Pricing
+          </Button>
+          <Typography variant="body2">Attach your mockup for our review</Typography>
+        </div>
+      </div>
     </Grid>
   );
 }
