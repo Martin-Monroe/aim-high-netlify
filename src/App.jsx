@@ -4,12 +4,17 @@ import Logo from "./components/logo/logo";
 import CanConstructor from "./components/canConstructor/canConstructor";
 import WavePng from "./assets/wave-cropped.png";
 
+const MAIN_SITE_URL = "https://drinkaimhigh.com/";
+
 function App() {
+
   return (
     <div className="c-layout">
       <header className="c-header">
         <div className="c-logo__main">
-          <Logo />
+          <a href={MAIN_SITE_URL}>
+            <Logo />
+          </a>
         </div>
         <div className="c-title">customize your can with Aim High.</div>
       </header>
