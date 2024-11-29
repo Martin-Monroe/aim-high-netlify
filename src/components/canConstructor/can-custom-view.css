@@ -59,7 +59,7 @@
   width: 210px;
 }
 
-.c-can-result__water {
+.c-can-result__beverage {
   text-align: center;
   font-family: "ClashGrotesk-Bold";
   font-size: 28px;
@@ -69,6 +69,11 @@
   /* 121.429% */
   letter-spacing: 0.28px;
   text-transform: uppercase;
+}
+
+.c-can-result__beverage--sparkling {
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .c-can-result__can-volume {

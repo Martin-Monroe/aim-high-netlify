@@ -21,8 +21,11 @@ export default function CustomizedCanView({
   aimHighLogoColor,
 
   isWaterLayerVisible,
+  beverageType,
 }) {
   const canContainerRef = useRef(null);
+
+  const isSparkling = beverageType.toLowerCase().includes("sparkling");
 
   return (
     <>
@@ -59,7 +62,7 @@ export default function CustomizedCanView({
             className="c-can-result__can-text"
             style={{ color: stickerColor }}
           >
-            <div className="c-can-result__water">Water</div>
+            <div className={`c-can-result__beverage ${isSparkling ? 'c-can-result__beverage--sparkling' : ''}`}>{beverageType}</div>
             <div className="c-can-result__can-volume">19.2 FL OZ (568 ml)</div>
           </div>
         </div>

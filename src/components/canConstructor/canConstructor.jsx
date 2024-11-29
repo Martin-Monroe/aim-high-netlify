@@ -31,6 +31,8 @@ export default function CanConstructor() {
   const [imageRect1, setImageRect1] = useState(initialImageReact1);
   const [imageRect2, setImageRect2] = useState(initialImageReact2);
 
+  const [ beverageType, setBeverageType ] = useState('Water');
+
   const setLogo1 = useCallback((file) => {
     setOriginalLogo1(file);
     if (!file) {
@@ -62,6 +64,7 @@ export default function CanConstructor() {
               onImageRectChange1={setImageRect1}
               onImageRectChange2={setImageRect2}
               isWaterLayerVisible={isWaterLayerVisible}
+              beverageType={beverageType}
             />
           </Grid>
           <Grid item sm={12} md={6} style={{ margin: "auto" }}>
@@ -82,6 +85,8 @@ export default function CanConstructor() {
               onChangeWaterLayerVisible={setIsWaterLayerVisible}
               onChangeAimHighLogoColor={setAimHighLogoColor}
               aimHighLogoColor={aimHighLogoColor}
+              beverageType={beverageType}
+              onChangeBeverageType={setBeverageType}
             />
           </Grid>
         </Grid>

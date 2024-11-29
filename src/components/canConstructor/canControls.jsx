@@ -5,8 +5,11 @@ import {
   Popover,
   Button,
   Checkbox,
+  InputLabel,
   FormControlLabel,
   Grid,
+  MenuItem,
+  Select,
   Typography,
 } from "@mui/material";
 import classNames from "classnames";
@@ -112,11 +115,13 @@ export default function CanControls({
   onChangeBackgroundColor,
   onChangeWaterLayerVisible,
   onChangeAimHighLogoColor,
+  onChangeBeverageType,
 
   canColor,
   stickerColor,
   backgroundColor,
   aimHighLogoColor,
+  beverageType,
 
   isWaterLayerVisible,
 
@@ -146,6 +151,10 @@ export default function CanControls({
     }, 300);
   };
 
+  const handleBeverageTypeSelectChange = (event) => {
+    onChangeBeverageType(event.target.value);
+  };
+
   return (
     <Grid container rowGap={3}>
       <div className="c-upload-group">
@@ -162,7 +171,7 @@ export default function CanControls({
           onImageRectChange={onImageRectChange2}
         />
       </div>
-      <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} rowSpacing={1}>
         <Grid item sm={12} md={6}>
           <ColorPicker
             colors={["#FDFDFD", "#0C0C0C", "#FACC15"]}
@@ -256,6 +265,19 @@ export default function CanControls({
             isCustomColorAllowed={true}
           />
         </Grid>
+        <Grid item sm={12} md={6} spacing={3}>
+          <label className="c-select-label">Select Beverage</label>
+          <Select
+            id="beverage-type-select"
+            value={beverageType}
+            onChange={handleBeverageTypeSelectChange}
+            sx={{ minWidth: '200px' }}
+          >
+            <MenuItem value={'Water'}>Water</MenuItem>
+            <MenuItem value={'Energy'}>Energy</MenuItem>
+            <MenuItem value={'Sparkling Water'}>Sparkling Water</MenuItem>
+          </Select>
+        </Grid>
       </Grid>
       <div className="c-actions-section">
         <LoadingButton
@@ -265,6 +287,7 @@ export default function CanControls({
           onClick={handleExportClick}
           loading={isExportLoading}
           disabled={isExportLoading}
+          style={{ minHeight: "40px" }}
         >
           Download Mock up
         </LoadingButton>
@@ -272,6 +295,7 @@ export default function CanControls({
           <Button
             variant="contained"
             color="primary"
+            style={{ minHeight: "40px" }}
             fullWidth={false}
             href={`mailto:${CONTACT_EMAIL}`}
             >
